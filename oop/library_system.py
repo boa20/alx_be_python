@@ -25,13 +25,13 @@ class Library:
 
     def list_books(self):
         for book in self.books:
-            cls = book.__class__.__name__
-            match cls:
+            class_name = book.__class__.__name__
+            match class_name:
                 case "Book":
-                    print(f"{cls}: {book.title} by {book.author}")
+                    print(f"{class_name}: {book.title} by {book.author}")
                 
                 case "EBook":
-                    print(f"{cls}: {book.title} by {book.author}, File Size: {book.file_size}KB")
+                    print(f"{class_name}: {book.title} by {book.author}, File Size: {book.file_size}KB")
                 
                 case "PrintBook":
-                    print(f"{cls}: {book.title} by {book.author}, Page Count: {book.page_count}")
+                    print(f"{class_name}: {book.title} by {book.author}, Page Count: {book.page_count}")
