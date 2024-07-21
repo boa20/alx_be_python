@@ -35,3 +35,6 @@ class Library:
                 
                 case "PrintBook":
                     print(f"{class_name}: {book.title} by {book.author}, Page Count: {book.page_count}")
+
+                case _:
+                    print(f"Unsupported book type")
